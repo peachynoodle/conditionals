@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Conditionals</title>
+<style>body {font-size: 28px;}</style>
+</head>
+
+<body>
+
+<script>
+var x = 10;
+var y = 5;
+var z = 5;
+
+document.write( x == y ); // one = ASSIGNS a value, two == COMPARES values
+document.write("<br>");
+
+document.write( y == z );
+document.write("<br>");
+
+
+var a = 3;
+var b = 3;
+var c = 4;
+
+if (a==b)
+{
+    document.write("They're equal! <br>");
+}
+
+if (a!=c) // ! means "not"
+{
+    document.write("They're not equal. <br>");
+}
+
+if (a==b && b==c) // && means "and"
+{
+    document.write("Two equal pairs.");
+}
+
+if (a==b || b==c) // || means "or"
+{
+    document.write("At least one pair is equal. <br>");
+}
+
+
+// compare strings
+
+var answer = "Sassafras"
+var guess = prompt("What is the highest mountain in South Carolina?");
+
+if (guess == answer) {
+    alert("You got it!");
+}
+else
+{
+    alert("Nope. That's not it.");
+}
+
+
+
+var grade = prompt("what is your grade?");
+
+if (grade >= 90)
+{
+    alert("You got an A!");
+}
+else if (grade >= 80)
+{
+    alert("You got a B.");
+}
+else if (grade >= 70)
+{
+    alert("You got a C.");
+}
+else if (grade >= 60)
+{
+    alert("You got a D.");
+}
+else
+{
+    alert("Try harder, you failed.");
+}
+
+
+// your turn...
+
+// 1. Modify the conditional above so that it tells you if you get a C, D, or F also.
+document.write("<br>");
+
+
+
+
+// 2. The two lines below assign random numbers from 1 to 12 to the values of x and y.
+//    Write a conditional after the prompt that displays an alert telling if the guess
+//    is correct or incorect.
+
+var x = Math.floor( 12 * Math.random() + 1)
+var y = Math.floor( 12 * Math.random() + 1)
+var product = x * y;
+
+var guess = prompt("What is the product of " + x + " and " + y + "?");
+guess = Number(guess)
+
+if (guess == product)
+{
+    alert("You got it right!");
+}
+else if (grade != product)
+{
+    alert("You got it wrong.");
+}
+
+//  Challenge:
+//
+//  See if you include the code above in a for loop that asks the user to try to enter the
+//  product of x and y 10 times. Count the number of correct answers and display an alert
+//  with their final tally after all problems are attempted.
+
+</script>
+
+</body>
+</html>
