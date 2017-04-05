@@ -29,8 +29,11 @@ function check()
     var guess4 = document.getElementById('four').value;
     var guess5 = document.getElementById('five').value;
 
+    var my_score = 0;
+
     if (answer1.toLowerCase() === guess1.toLowerCase()) {
         document.getElementById('one').style.backgroundColor = "#88FF88";
+        my_score = my_score + 1;
     }
     else
     {
@@ -39,6 +42,7 @@ function check()
 
     if (answer2.toLowerCase() === guess2.toLowerCase()) {
         document.getElementById('two').style.backgroundColor = "#88FF88";
+        my_score = my_score + 1;
     }
     else
     {
@@ -47,6 +51,7 @@ function check()
 
     if (answer3.toLowerCase() === guess3.toLowerCase()) {
         document.getElementById('three').style.backgroundColor = "#88FF88";
+        my_score = my_score + 1;
     }
     else
     {
@@ -55,6 +60,7 @@ function check()
 
     if (answer4.toLowerCase() === guess4.toLowerCase()) {
         document.getElementById('four').style.backgroundColor = "#88FF88";
+        my_score = my_score + 1;
     }
     else
     {
@@ -63,11 +69,34 @@ function check()
 
     if (answer5.toLowerCase() === guess5.toLowerCase()) {
         document.getElementById('five').style.backgroundColor = "#88FF88";
+        my_score = my_score + 1;
     }
     else
     {
         document.getElementById('five').style.backgroundColor = "#FF0000";
     }
+
+    if (my_score == 5) {
+        result = "Good job, you got them all right!";
+    }
+    else if (my_score == 4) {
+        result = "That's okay.";
+    }
+    else if (my_score == 3 {
+        result = "Why.";
+    }
+    else if (my_score == 2) {
+        result = "I don't understand";
+    }
+    else if (my_score == 1) {
+        result = "This is depressing.";
+    }
+    else {
+        result = "Why."
+    }
+
+
+    document.getElementById('result').innerHTML = result;
 }
 </script>
 </head>
@@ -88,6 +117,8 @@ function check()
 <input type="button" onclick="check()" value="Check it!">
 
 </form>
+
+<p id="result"></p>
 
 </body>
 </html>
